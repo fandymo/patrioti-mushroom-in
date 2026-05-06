@@ -1,0 +1,9 @@
+{
+  "query": "\nDELETE FROM categories WHERE id IN (4, 5);\nDELETE FROM sizes WHERE id IN (4, 5, 6);\nDELETE FROM packaging_types WHERE id = 4;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mK4K8RSg7NqN69.root --database QVZg4cC256aKwkDLioNKF3 --execute \nDELETE FROM categories WHERE id IN (4, 5);\nDELETE FROM sizes WHERE id IN (4, 5, 6);\nDELETE FROM packaging_types WHERE id = 4;\n",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2015
+}

@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO packaging_types (name) VALUES ('White Box'), ('Brown Box');\nINSERT INTO categories (name) VALUES ('Small'), ('Basket'), ('Filling');\nINSERT INTO shifts (name, startTime, endTime) VALUES ('בוקר', '06:00', '14:00'), ('צהריים', '14:00', '22:00'), ('לילה', '22:00', '06:00');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mK4K8RSg7NqN69.root --database QVZg4cC256aKwkDLioNKF3 --execute INSERT INTO packaging_types (name) VALUES ('White Box'), ('Brown Box');\nINSERT INTO categories (name) VALUES ('Small'), ('Basket'), ('Filling');\nINSERT INTO shifts (name, startTime, endTime) VALUES ('בוקר', '06:00', '14:00'), ('צהריים', '14:00', '22:00'), ('לילה', '22:00', '06:00');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2209
+}

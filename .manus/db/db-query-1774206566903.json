@@ -1,0 +1,94 @@
+{
+  "query": "SELECT 'categories' as tbl, id, name, status FROM categories UNION ALL SELECT 'sizes', id, name, status FROM sizes UNION ALL SELECT 'packaging_types', id, name, status FROM packaging_types ORDER BY tbl, id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mK4K8RSg7NqN69.root --database QVZg4cC256aKwkDLioNKF3 --execute SELECT 'categories' as tbl, id, name, status FROM categories UNION ALL SELECT 'sizes', id, name, status FROM sizes UNION ALL SELECT 'packaging_types', id, name, status FROM packaging_types ORDER BY tbl, id;",
+  "rows": [
+    {
+      "tbl": "categories",
+      "id": "1",
+      "name": "לבן",
+      "status": "active"
+    },
+    {
+      "tbl": "categories",
+      "id": "2",
+      "name": "חום",
+      "status": "active"
+    },
+    {
+      "tbl": "categories",
+      "id": "4",
+      "name": "לבן",
+      "status": "active"
+    },
+    {
+      "tbl": "categories",
+      "id": "5",
+      "name": "חום",
+      "status": "active"
+    },
+    {
+      "tbl": "packaging_types",
+      "id": "1",
+      "name": "White Box",
+      "status": "active"
+    },
+    {
+      "tbl": "packaging_types",
+      "id": "2",
+      "name": "Brown Box",
+      "status": "active"
+    },
+    {
+      "tbl": "packaging_types",
+      "id": "3",
+      "name": "DUETO",
+      "status": "active"
+    },
+    {
+      "tbl": "packaging_types",
+      "id": "4",
+      "name": "DUETO",
+      "status": "active"
+    },
+    {
+      "tbl": "sizes",
+      "id": "1",
+      "name": "Small",
+      "status": "active"
+    },
+    {
+      "tbl": "sizes",
+      "id": "2",
+      "name": "Basket",
+      "status": "active"
+    },
+    {
+      "tbl": "sizes",
+      "id": "3",
+      "name": "Filling",
+      "status": "active"
+    },
+    {
+      "tbl": "sizes",
+      "id": "4",
+      "name": "Small",
+      "status": "active"
+    },
+    {
+      "tbl": "sizes",
+      "id": "5",
+      "name": "Basket",
+      "status": "active"
+    },
+    {
+      "tbl": "sizes",
+      "id": "6",
+      "name": "Filling",
+      "status": "active"
+    }
+  ],
+  "messages": [],
+  "stdout": "tbl\tid\tname\tstatus\ncategories\t1\tלבן\tactive\ncategories\t2\tחום\tactive\ncategories\t4\tלבן\tactive\ncategories\t5\tחום\tactive\npackaging_types\t1\tWhite Box\tactive\npackaging_types\t2\tBrown Box\tactive\npackaging_types\t3\tDUETO\tactive\npackaging_types\t4\tDUETO\tactive\nsizes\t1\tSmall\tactive\nsizes\t2\tBasket\tactive\nsizes\t3\tFilling\tactive\nsizes\t4\tSmall\tactive\nsizes\t5\tBasket\tactive\nsizes\t6\tFilling\tactive\n",
+  "stderr": "",
+  "execution_time_ms": 1564
+}

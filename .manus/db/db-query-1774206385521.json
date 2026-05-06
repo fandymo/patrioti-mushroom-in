@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `sizes` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`name` varchar(255) NOT NULL,\n\t`status` enum('active','inactive') NOT NULL DEFAULT 'active',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `sizes_id` PRIMARY KEY(`id`)\n);\nALTER TABLE `harvest_records` ADD `sizeId` int;\nINSERT INTO sizes (name, status) VALUES ('Small', 'active'), ('Basket', 'active'), ('Filling', 'active');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mK4K8RSg7NqN69.root --database QVZg4cC256aKwkDLioNKF3 --execute CREATE TABLE `sizes` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`name` varchar(255) NOT NULL,\n\t`status` enum('active','inactive') NOT NULL DEFAULT 'active',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `sizes_id` PRIMARY KEY(`id`)\n);\nALTER TABLE `harvest_records` ADD `sizeId` int;\nINSERT INTO sizes (name, status) VALUES ('Small', 'active'), ('Basket', 'active'), ('Filling', 'active');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 3076
+}

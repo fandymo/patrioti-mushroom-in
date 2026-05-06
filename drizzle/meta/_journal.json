@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1774204805903,
+      "tag": "0000_mighty_dragon_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1774205145480,
+      "tag": "0001_eager_luminals",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1774206372267,
+      "tag": "0002_absent_ego",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1774345664084,
+      "tag": "0003_melted_sleeper",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1774459044305,
+      "tag": "0004_absurd_proemial_gods",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1775371286540,
+      "tag": "0005_nasty_tombstone",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1775387620729,
+      "tag": "0006_wooden_nebula",
+      "breakpoints": true
+    }
+  ]
+}

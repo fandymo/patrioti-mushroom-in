@@ -1,0 +1,52 @@
+{
+  "query": "SELECT * FROM categories; SELECT * FROM packaging_types;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mK4K8RSg7NqN69.root --database QVZg4cC256aKwkDLioNKF3 --execute SELECT * FROM categories; SELECT * FROM packaging_types;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "לבן",
+      "status": "active",
+      "createdAt": "2026-03-22 18:46:10",
+      "updatedAt": "2026-03-22 19:04:18"
+    },
+    {
+      "id": "2",
+      "name": "חום",
+      "status": "active",
+      "createdAt": "2026-03-22 18:46:10",
+      "updatedAt": "2026-03-22 19:04:19"
+    },
+    {
+      "id": "id",
+      "name": "name",
+      "status": "status",
+      "createdAt": "createdAt",
+      "updatedAt": "updatedAt"
+    },
+    {
+      "id": "1",
+      "name": "White Box",
+      "status": "active",
+      "createdAt": "2026-03-22 18:46:10",
+      "updatedAt": "2026-03-22 18:46:10"
+    },
+    {
+      "id": "2",
+      "name": "Brown Box",
+      "status": "active",
+      "createdAt": "2026-03-22 18:46:10",
+      "updatedAt": "2026-03-22 18:46:10"
+    },
+    {
+      "id": "3",
+      "name": "DUETO",
+      "status": "active",
+      "createdAt": "2026-03-22 19:04:19",
+      "updatedAt": "2026-03-22 19:04:19"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tstatus\tcreatedAt\tupdatedAt\n1\tלבן\tactive\t2026-03-22 18:46:10\t2026-03-22 19:04:18\n2\tחום\tactive\t2026-03-22 18:46:10\t2026-03-22 19:04:19\nid\tname\tstatus\tcreatedAt\tupdatedAt\n1\tWhite Box\tactive\t2026-03-22 18:46:10\t2026-03-22 18:46:10\n2\tBrown Box\tactive\t2026-03-22 18:46:10\t2026-03-22 18:46:10\n3\tDUETO\tactive\t2026-03-22 19:04:19\t2026-03-22 19:04:19\n",
+  "stderr": "",
+  "execution_time_ms": 1823
+}

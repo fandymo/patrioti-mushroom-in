@@ -1,0 +1,1 @@
+ALTER TABLE `barcode_sequences` ADD CONSTRAINT `barcode_sequences_prefix_unique` UNIQUE(`prefix`);

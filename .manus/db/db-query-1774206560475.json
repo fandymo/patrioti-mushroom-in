@@ -1,0 +1,9 @@
+{
+  "query": "\nINSERT INTO sizes (name, status) VALUES ('Small', 'active'), ('Basket', 'active'), ('Filling', 'active') ON DUPLICATE KEY UPDATE name=VALUES(name);\n\nDELETE FROM categories WHERE name NOT IN ('לבן', 'חום');\nINSERT INTO categories (name, status) VALUES ('לבן', 'active'), ('חום', 'active') ON DUPLICATE KEY UPDATE name=VALUES(name);\n\nINSERT INTO packaging_types (name, status) VALUES ('DUETO', 'active') ON DUPLICATE KEY UPDATE name=VALUES(name);\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mK4K8RSg7NqN69.root --database QVZg4cC256aKwkDLioNKF3 --execute \nINSERT INTO sizes (name, status) VALUES ('Small', 'active'), ('Basket', 'active'), ('Filling', 'active') ON DUPLICATE KEY UPDATE name=VALUES(name);\n\nDELETE FROM categories WHERE name NOT IN ('לבן', 'חום');\nINSERT INTO categories (name, status) VALUES ('לבן', 'active'), ('חום', 'active') ON DUPLICATE KEY UPDATE name=VALUES(name);\n\nINSERT INTO packaging_types (name, status) VALUES ('DUETO', 'active') ON DUPLICATE KEY UPDATE name=VALUES(name);\n",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2337
+}

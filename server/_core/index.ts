@@ -9,6 +9,10 @@ import { serveStatic, setupVite } from "./vite";
 import { runMigrations, ensureAdminUser } from "../migrate";
 
 async function startServer() {
+  console.log("[startup] Node version:", process.version);
+  console.log("[startup] NODE_ENV:", process.env.NODE_ENV);
+  console.log("[startup] PORT:", process.env.PORT);
+  console.log("[startup] DATABASE_URL set:", !!process.env.DATABASE_URL);
   const app = express();
   const server = createServer(app);
   // Configure body parser with larger size limit for file uploads

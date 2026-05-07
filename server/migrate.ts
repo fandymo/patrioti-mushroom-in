@@ -57,7 +57,22 @@ export async function runMigrations() {
         .filter((s) => s.length > 0 && !s.startsWith("--"));
 
       for (const stmt of statements) {
-        await connection.execute(stmt);
+        try {
+          await connection.execute(stmt);
+        } catch (stmtErr: any) {
+          // Ignore "already exists" errors — migration partially ran before
+          const ignorable = [
+            1050, // ER_TABLE_EXISTS_ERROR  — CREATE TABLE
+            1060, // ER_DUP_FIELDNAME       — ALTER TABLE ADD COLUMN
+            1061, // ER_DUP_KEYNAME         — CREATE INDEX / ADD KEY
+            1068, // ER_MULTIPLE_PRI_KEY    — multiple primary keys
+          ];
+          if (ignorable.includes(stmtErr.errno)) {
+            console.warn(`[migrate] skipping (already exists): ${stmtErr.sqlMessage}`);
+          } else {
+            throw stmtErr;
+          }
+        }
       }
 
       await connection.execute("INSERT INTO _migrations (filename) VALUES (?)", [file]);

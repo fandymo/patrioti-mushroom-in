@@ -425,7 +425,7 @@ export default function Delivery() {
   const isDispatched = activeDelivery?.status === "dispatched";
 
   // Filter history
-  const historyItems = (historyQ.data ?? []) as any[];
+  const historyItems = (historyQ.data?.deliveries ?? []) as any[];
   const filteredHistory = historyItems.filter((d: any) => {
     if (!historySearch) return true;
     const q = historySearch.toLowerCase();

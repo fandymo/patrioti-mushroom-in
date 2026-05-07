@@ -90,7 +90,7 @@ function ColdRoomPickerDialog({
     { enabled: open }
   );
 
-  const items = (data ?? []).filter((item: any) => {
+  const items = (data?.items ?? []).filter((item: any) => {
     if (item.barcode === exclude) return false;
     if (!["available", "in_packing"].includes(item.status)) return false;
     if (search) {

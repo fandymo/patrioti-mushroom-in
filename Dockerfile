@@ -40,6 +40,9 @@ RUN pnpm install --frozen-lockfile --prod
 # Copy built output from builder
 COPY --from=builder /app/dist ./dist
 
+# Copy migration SQL files (auto-run on startup)
+COPY drizzle/*.sql ./drizzle/
+
 ENV NODE_ENV=production
 ENV PORT=3000
 

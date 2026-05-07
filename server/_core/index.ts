@@ -7,6 +7,7 @@ import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
+import { runMigrations, ensureAdminUser } from "../migrate";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -64,4 +65,10 @@ async function startServer() {
   });
 }
 
-startServer().catch(console.error);
+async function main() {
+  await runMigrations();
+  await ensureAdminUser();
+  await startServer();
+}
+
+main().catch(console.error);

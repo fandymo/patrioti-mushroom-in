@@ -6,19 +6,18 @@ import path from "path";
 
 export async function setupVite(app: Express, server: Server) {
   // Dynamic imports keep vite out of the production bundle
+  // Do NOT import vite.config.js here — esbuild would bundle it and pull in
+  // devDependencies (e.g. @builder.io/vite-plugin-jsx-loc) that are absent in production.
+  // Pass configFile: undefined so Vite auto-discovers vite.config.ts at runtime.
   const { createServer: createViteServer } = await import("vite");
-  const { default: viteConfig } = await import("../../vite.config.js");
-
-  const serverOptions = {
-    middlewareMode: true,
-    hmr: { server },
-    allowedHosts: true as const,
-  };
 
   const vite = await createViteServer({
-    ...viteConfig,
-    configFile: false,
-    server: serverOptions,
+    configFile: undefined,
+    server: {
+      middlewareMode: true,
+      hmr: { server },
+      allowedHosts: true as const,
+    },
     appType: "custom",
   });
 

@@ -66,9 +66,13 @@ async function startServer() {
 }
 
 async function main() {
-  await runMigrations();
-  await ensureAdminUser();
+  // Start server first so Railway health check passes immediately
   await startServer();
+
+  // Run migrations in the background after server is up
+  runMigrations()
+    .then(() => ensureAdminUser())
+    .catch((err) => console.error("[startup] Migration error:", err));
 }
 
 main().catch(console.error);
